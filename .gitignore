@@ -1,0 +1,5 @@
+# local helper script — keep out of the repo
+ship.sh
+
+# macOS noise
+.DS_Store

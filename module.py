@@ -5,7 +5,7 @@ import numpy as np
 class Module:
 
   def __init__(self):
-    self.params: Dict[str, np.darray] = {}
+    self.params: Dict[str, np.ndarray] = {}
     self.grads: Dict[str, np.ndarray] = {}
     self._children: Dict[str, "Module"] = {}
 
@@ -20,4 +20,4 @@ class Module:
       yield from child.param_items(prefix + name + ".")
 
   def num_params(self):
-    return int(sum(p.size for _, p, _ in self.param.items()))
+    return int(sum(p.size for _, p, _ in self.param_items()))
